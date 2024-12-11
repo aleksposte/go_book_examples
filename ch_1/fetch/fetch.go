@@ -8,7 +8,16 @@ import (
 )
 
 func main() {
+	// 1.8
+	// const prefix string = "http://"
+
 	for _, url := range os.Args[1:] {
+
+		// 1.8
+		// if !strings.HasPrefix(url, "http://") {
+		// 	url = prefix + url
+		// }
+
 		resp, err := http.Get(url)
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "fetch: %v\n", err)
